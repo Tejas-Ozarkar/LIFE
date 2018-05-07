@@ -1,0 +1,32 @@
+@media (min-width: 767.99px) {
+    .statistics {
+        i {
+            font-size: 5vw;
+        }
+        h2 {
+            font-size: 2.5vw;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .statistics {
+        i {
+            font-size: 5vw;
+        }
+        h2 {
+            font-size: 3vw;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .statistics {
+        i {
+            font-size: 6vw;
+        }
+        h2 {
+            font-size: 8vw;
+        }
+    }
+}

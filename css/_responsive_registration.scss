@@ -1,0 +1,36 @@
+@media (min-width: 767.99px) {
+    .registration-background {
+        background-size: cover;
+    }
+    .registration-content {
+        padding: 100px 0px;
+    }
+    .registration-box {
+        width: 35%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .registration-background {
+        background-size: cover;
+    }
+    .registration-box {
+        width: 80%;
+    }
+    .registration-content {
+        padding: 100px 0px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .registration-background {
+        background-size: cover;
+    }
+    .registration-box {
+        width: 100%;
+    }
+    .registration-content {
+        border-bottom: 1px solid rgb(194, 192, 192);
+        padding: 0;
+    }
+}

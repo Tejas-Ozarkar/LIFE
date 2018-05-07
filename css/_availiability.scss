@@ -1,0 +1,155 @@
+/* START: Availability Page Styles */
+
+.availability-main {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    .filter-main {
+        width: 100%;
+        .filter-box {
+            width: 100%;
+            height: 400px;
+            background: white;
+            .filter-header {
+                height: 40px;
+                background: rgb(88, 87, 87);
+                color: #ffffff;
+                font-size: 20px;
+                @extend %flex-box;
+                h4 {
+                    margin-top: 5px;
+                    font-size: 20px;
+                }
+            }
+            .filter-body {
+                padding: 20px;
+            }
+            p {
+                color: rgba(19, 102, 228, 0.76);
+                margin: 0;
+                margin-top: 20px;
+            }
+            .filter-search {
+                width: 100%;
+            }
+            .filter-blood-group {
+                width: 100%;
+            }
+            .filter-city {
+                width: 100%;
+            }
+            .filter-button {
+                margin-top: 20px;
+                width: 50%;
+                padding: 5px;
+                background: $transparent;
+                border: 1.5px solid rgba(0, 102, 255, 0.616);
+                border-radius: 20px;
+                cursor: pointer;
+                margin: 0px 25%;
+                margin-top: 30px;
+            }
+            .filter-button:hover {
+                background: rgb(88, 87, 87);
+                border: none;
+                color: white;
+            }
+        }
+        .filter-box:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+    .list {
+        margin: 0;
+        padding: 0;
+        .list-card {
+            margin-top: 20px;
+            height: 200px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            //border-radius: 10px;
+            background: white;
+            .hospital-detail {
+                width: 60%;
+                float: left;
+                overflow: hidden;
+                padding: 20px;
+                h3 {
+                    font-size: 20px;
+                    color: rgba(0, 102, 255, 0.616);
+                }
+                h4 {
+                    font-size: 14px;
+                }
+                h5 {
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+            }
+            .blood-detail {
+                width: 40.002%;
+                float: left;
+                overflow: hidden;
+                padding: 10px;
+                height: 80%;
+                background: rgb(208, 208, 209);
+                @extend %flex-box;
+                i {
+                    color: rgb(228, 84, 84);
+                    font-size: 50px;
+                }
+                h3 {
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    color: rgb(66, 65, 65);
+                }
+            }
+            .request-box {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background: rgb(221, 217, 217);
+                input {
+                    height: 100%;
+                    width: 60%;
+                    float: left;
+                    border: none;
+                    background: $transparent;
+                    padding-left: 20px;
+                    color: rgb(19, 19, 19);
+                }
+                a {
+                    height: 100%;
+                    width: 40.002%;
+                    float: left;
+                    border: none;
+                    background: $transparent;
+                    appearance: button;
+                    color: white;
+                    color: rgb(230, 230, 230);
+                    background: rgb(88, 87, 87);
+                    border: none;
+                    @extend %flex-box;
+                }
+                a:hover {
+                    background: #333;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+        .list-card:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+}
+
+
+/* END: Availability Page Styles */

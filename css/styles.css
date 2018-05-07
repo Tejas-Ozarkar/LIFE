@@ -1,0 +1,786 @@
+/* Variables */
+.footer .col-sm-4, .copyright, .content-side .content-side-filter, .login-side .login-side-filter, .statistics .card-statistics .col-md-8,
+.statistics .card-statistics .col-md-4, .registration-background .registration-content, .registration-background .registration-content .registration-box .registration-header, .availability-main .filter-main .filter-box .filter-header, .availability-main .list .list-card .blood-detail, .availability-main .list .list-card .request-box a, .dashboard-main .col-md-3 .controls a .control-box,
+.dashboard-main .col-md-3 .controls-receiver a .control-box, .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-blood-group, .dashboard-main .col-md-9 .request-card .request-card-left, .dashboard-main .col-md-9 .request-card .request-card-right, .dashboard-main .col-md-9 .receiver-request-card .status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0; }
+
+.app {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  background: rgba(194, 191, 191, 0.411); }
+
+.active {
+  color: #3e99d6 !important;
+  background: rgba(0, 0, 0, 0) !important; }
+
+.row {
+  margin: 0;
+  padding: 0; }
+
+nav {
+  font-family: 'Raleway', sans-serif; }
+
+.footer {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 50%;
+  background: white;
+  padding: 4%; }
+  .footer .col-sm-4 h4 {
+    font-size: 18px;
+    text-decoration: underline; }
+  .footer .fact {
+    text-align: center;
+    font-size: 14px;
+    color: #333; }
+
+.copyright {
+  width: 100%;
+  height: 30px;
+  background: #333;
+  color: white;
+  align-items: center;
+  font-size: 14px; }
+
+/* START: Snackbar */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px; }
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+
+  to {
+    bottom: 0;
+    opacity: 0; } }
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+
+  to {
+    bottom: 0;
+    opacity: 0; } }
+
+/* END: Snackbar */
+/* START: Index Page Styles */
+.main {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: url("../img/img7.jpg");
+  background-size: cover;
+  background-position: 0px 0px; }
+
+.content-side {
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  margin: 0; }
+  .content-side .content-side-filter {
+    width: 100%;
+    height: 100%;
+    background: rgba(84, 100, 247, 0.644);
+    padding: 20px;
+    text-align: center;
+    color: white; }
+    .content-side .content-side-filter a {
+      color: whitesmoke;
+      padding: 10px 20px;
+      border: 2px solid whitesmoke;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: bold; }
+    .content-side .content-side-filter a:hover {
+      text-decoration: none;
+      background: #333;
+      color: white;
+      border: 2px solid #333; }
+
+.login-side {
+  height: 500px;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+  .login-side .login-side-filter {
+    height: 100%;
+    width: 100%;
+    background: rgba(114, 110, 110, 0.671); }
+
+.login {
+  width: 80%;
+  height: 350px;
+  border: 0px;
+  background: rgba(56, 55, 55, 0.733); }
+  .login .tabs {
+    width: 100%; }
+    .login .tabs button {
+      width: 50%;
+      float: left;
+      background: #fff;
+      border: 0px;
+      border-radius: 0px;
+      padding: 10px 0px;
+      cursor: pointer; }
+    .login .tabs button:focus {
+      border: 0px; }
+    .login .tabs #tabHospital {
+      background: rgba(218, 212, 212, 0.774); }
+    .login .tabs #tabReceiver {
+      background: rgba(56, 55, 55, 0.733);
+      color: white; }
+  .login .login-hospital {
+    display: none; }
+  .login .login-form-box {
+    padding: 60px; }
+    .login .login-form-box form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #e7dcdc; }
+      .login .login-form-box form i {
+        font-size: 60px; }
+      .login .login-form-box form input {
+        margin-top: 20px;
+        background: rgba(0, 0, 0, 0);
+        border: 1px solid #e7dcdc;
+        border-radius: 20px;
+        color: white; }
+      .login .login-form-box form ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1;
+        text-align: center;
+        /* Firefox */ }
+      .login .login-form-box form button {
+        margin-top: 30px;
+        background: rgba(0, 0, 0, 0);
+        border: 1.5px solid #e7dcdc;
+        padding: 5px 20px;
+        border-radius: 20px; }
+      .login .login-form-box form button:hover {
+        background: #333; }
+
+.statistics {
+  margin: 50px 0px; }
+  .statistics .card-statistics {
+    margin-top: 20px;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .statistics .card-statistics .col-md-8,
+    .statistics .card-statistics .col-md-4 {
+      text-align: center; }
+      .statistics .card-statistics .col-md-8 i,
+      .statistics .card-statistics .col-md-4 i {
+        color: #3e99d6; }
+      .statistics .card-statistics .col-md-8 p,
+      .statistics .card-statistics .col-md-4 p {
+        font-size: 12px;
+        color: #3e99d6;
+        font-weight: bold; }
+      .statistics .card-statistics .col-md-8 h2,
+      .statistics .card-statistics .col-md-4 h2 {
+        margin-top: 10px;
+        color: #333; }
+
+/* END: Index Page Styles */
+/* START: Registration Page Styles */
+.registration-background {
+  width: 100%;
+  height: 100%;
+  background: url("../img/img7.jpg");
+  background-position: 0px 0px; }
+  .registration-background .registration-content {
+    width: 100%;
+    height: 100%; }
+    .registration-background .registration-content .registration-box {
+      background: white; }
+      .registration-background .registration-content .registration-box .registration-header {
+        width: 100%;
+        height: 50px;
+        color: white; }
+      .registration-background .registration-content .registration-box .form {
+        padding: 20px;
+        text-align: center; }
+        .registration-background .registration-content .registration-box .form input {
+          border-radius: 0px;
+          margin: 0; }
+        .registration-background .registration-content .registration-box .form .divName {
+          width: 100%; }
+          .registration-background .registration-content .registration-box .form .divName input {
+            width: 50%;
+            float: left; }
+        .registration-background .registration-content .registration-box .form ::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          opacity: 1;
+          /* Firefox */ }
+        .registration-background .registration-content .registration-box .form button {
+          margin-top: 20px;
+          background: rgba(0, 0, 0, 0);
+          border-radius: 40px;
+          padding: 10px 20px;
+          font-weight: bold; }
+      .registration-background .registration-content .registration-box .receiverForm input {
+        border: 1.5px solid #c95c1c;
+        border-top: 0.75px solid #c95c1c;
+        border-bottom: 0.75px solid #c95c1c;
+        color: #c95c1c; }
+      .registration-background .registration-content .registration-box .receiverForm .divName input {
+        border-top: 1.5px solid #c95c1c; }
+      .registration-background .registration-content .registration-box .receiverForm button {
+        border: 2px solid #c95c1c;
+        color: #c95c1c; }
+      .registration-background .registration-content .registration-box .receiverForm .radio-gender {
+        width: 100%;
+        border: 1.5px solid #c95c1c;
+        border-top: 0.75px solid #c95c1c;
+        border-bottom: 0.75px solid #c95c1c;
+        padding: 5px 12px;
+        text-align: start;
+        color: #c95c1c; }
+        .registration-background .registration-content .registration-box .receiverForm .radio-gender input {
+          margin-left: 10px; }
+      .registration-background .registration-content .registration-box .receiverForm select {
+        width: 100%;
+        height: 35px;
+        border: 1.5px solid #c95c1c;
+        border-top: 0.75px solid #c95c1c;
+        color: #c95c1c;
+        padding-left: 8px; }
+      .registration-background .registration-content .registration-box .hospitalForm input {
+        border: 1.5px solid #006421;
+        border-top: 0.75px solid #006421;
+        border-bottom: 0.75px solid #006421;
+        color: #006421; }
+      .registration-background .registration-content .registration-box .hospitalForm .divName input {
+        border-top: 1.5px solid #006421; }
+      .registration-background .registration-content .registration-box .hospitalForm button {
+        border: 2px solid #006421;
+        color: #006421; }
+
+.receiverRegBackground {
+  background: linear-gradient(to right, rgba(26, 25, 25, 0.568), rgba(167, 65, 34, 0.596)); }
+
+.hospitalRegBackground {
+  background: linear-gradient(to right, rgba(36, 33, 36, 0.466), rgba(68, 228, 62, 0.342)); }
+
+.header-receiver {
+  background: #c95c1c; }
+
+.header-hospital {
+  background: #006421; }
+
+/* END: Registration Page Styles */
+/* START: Availability Page Styles */
+.availability-main {
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80px;
+  box-sizing: border-box;
+  padding: 20px; }
+  .availability-main .filter-main {
+    width: 100%; }
+    .availability-main .filter-main .filter-box {
+      width: 100%;
+      height: 400px;
+      background: white; }
+      .availability-main .filter-main .filter-box .filter-header {
+        height: 40px;
+        background: #585757;
+        color: #ffffff;
+        font-size: 20px; }
+        .availability-main .filter-main .filter-box .filter-header h4 {
+          margin-top: 5px;
+          font-size: 20px; }
+      .availability-main .filter-main .filter-box .filter-body {
+        padding: 20px; }
+      .availability-main .filter-main .filter-box p {
+        color: rgba(19, 102, 228, 0.76);
+        margin: 0;
+        margin-top: 20px; }
+      .availability-main .filter-main .filter-box .filter-search {
+        width: 100%; }
+      .availability-main .filter-main .filter-box .filter-blood-group {
+        width: 100%; }
+      .availability-main .filter-main .filter-box .filter-city {
+        width: 100%; }
+      .availability-main .filter-main .filter-box .filter-button {
+        margin-top: 20px;
+        width: 50%;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0);
+        border: 1.5px solid rgba(0, 102, 255, 0.616);
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 0px 25%;
+        margin-top: 30px; }
+      .availability-main .filter-main .filter-box .filter-button:hover {
+        background: #585757;
+        border: none;
+        color: white; }
+    .availability-main .filter-main .filter-box:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .availability-main .list {
+    margin: 0;
+    padding: 0; }
+    .availability-main .list .list-card {
+      margin-top: 20px;
+      height: 200px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: white; }
+      .availability-main .list .list-card .hospital-detail {
+        width: 60%;
+        float: left;
+        overflow: hidden;
+        padding: 20px; }
+        .availability-main .list .list-card .hospital-detail h3 {
+          font-size: 20px;
+          color: rgba(0, 102, 255, 0.616); }
+        .availability-main .list .list-card .hospital-detail h4 {
+          font-size: 14px; }
+        .availability-main .list .list-card .hospital-detail h5 {
+          margin-top: 10px;
+          font-size: 18px; }
+      .availability-main .list .list-card .blood-detail {
+        width: 40.002%;
+        float: left;
+        overflow: hidden;
+        padding: 10px;
+        height: 80%;
+        background: #d0d0d1; }
+        .availability-main .list .list-card .blood-detail i {
+          color: #e45454;
+          font-size: 50px; }
+        .availability-main .list .list-card .blood-detail h3 {
+          margin-top: 10px;
+          margin-left: 5px;
+          color: #424141; }
+      .availability-main .list .list-card .request-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: #ddd9d9; }
+        .availability-main .list .list-card .request-box input {
+          height: 100%;
+          width: 60%;
+          float: left;
+          border: none;
+          background: rgba(0, 0, 0, 0);
+          padding-left: 20px;
+          color: #131313; }
+        .availability-main .list .list-card .request-box a {
+          height: 100%;
+          width: 40.002%;
+          float: left;
+          border: none;
+          background: rgba(0, 0, 0, 0);
+          appearance: button;
+          color: #e6e6e6;
+          background: #585757;
+          border: none; }
+        .availability-main .list .list-card .request-box a:hover {
+          background: #333;
+          color: white;
+          cursor: pointer; }
+    .availability-main .list .list-card:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+/* END: Availability Page Styles */
+/* START: Dashboard Page Styles */
+.dashboard-main {
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.555); }
+  .dashboard-main .col-md-3 {
+    padding: 20px; }
+    .dashboard-main .col-md-3 .controls,
+    .dashboard-main .col-md-3 .controls-receiver {
+      width: 100%; }
+      .dashboard-main .col-md-3 .controls a,
+      .dashboard-main .col-md-3 .controls-receiver a {
+        text-decoration: none;
+        color: #333; }
+        .dashboard-main .col-md-3 .controls a .control-box,
+        .dashboard-main .col-md-3 .controls-receiver a .control-box {
+          margin-top: 20px;
+          height: 150px;
+          background: #333;
+          background: white; }
+          .dashboard-main .col-md-3 .controls a .control-box p,
+          .dashboard-main .col-md-3 .controls-receiver a .control-box p {
+            margin-top: 10px;
+            font-weight: bold; }
+          .dashboard-main .col-md-3 .controls a .control-box i,
+          .dashboard-main .col-md-3 .controls-receiver a .control-box i {
+            font-size: 40px; }
+        .dashboard-main .col-md-3 .controls a .control-box:hover,
+        .dashboard-main .col-md-3 .controls-receiver a .control-box:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .dashboard-main .col-md-9 {
+    padding: 60px; }
+    .dashboard-main .col-md-9 .edit-main h3 {
+      margin-top: 20px;
+      color: #f32f39; }
+    .dashboard-main .col-md-9 .edit-main .row {
+      margin-top: 10px; }
+    .dashboard-main .col-md-9 .edit-main h5 {
+      color: #3c74ec; }
+    .dashboard-main .col-md-9 .edit-main button {
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 100px;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0);
+      border: 2px solid #333;
+      border-radius: 50px;
+      cursor: pointer; }
+    .dashboard-main .col-md-9 .edit-main button:hover {
+      border: 2px solid #333;
+      background: #333;
+      color: white; }
+    .dashboard-main .col-md-9 .dashboard-content h3 {
+      color: #f32f39; }
+    .dashboard-main .col-md-9 .dashboard-content .header-text1 {
+      margin-bottom: 20px;
+      margin-top: 20px; }
+    .dashboard-main .col-md-9 .dashboard-content .header-text2 {
+      margin-top: 50px; }
+    .dashboard-main .col-md-9 .dashboard-content form {
+      width: 100%;
+      height: 40px; }
+      .dashboard-main .col-md-9 .dashboard-content form select {
+        height: 100%;
+        border: 2px solid white; }
+      .dashboard-main .col-md-9 .dashboard-content form input {
+        height: 100%;
+        border: 2px solid white;
+        padding-left: 20px; }
+      .dashboard-main .col-md-9 .dashboard-content form button {
+        height: 100%;
+        border: 2px solid #333;
+        padding: 0px 20px;
+        background: #333;
+        color: white; }
+      .dashboard-main .col-md-9 .dashboard-content form select:focus,
+      .dashboard-main .col-md-9 .dashboard-content form input:focus,
+      .dashboard-main .col-md-9 .dashboard-content form button:focus {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability {
+      width: 100%;
+      height: 160px;
+      background: white;
+      padding: 10px;
+      position: relative;
+      margin-top: 20px; }
+      .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-blood-group {
+        width: 100%;
+        height: 25%;
+        background: white;
+        font-weight: bold;
+        color: #413f3f;
+        padding-left: 10px; }
+      .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability input {
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        text-align: center;
+        border: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: #f32f39;
+        transition: all .2s ease-in-out;
+        background: rgba(0, 0, 0, 0); }
+      .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons {
+        width: 100%;
+        height: 25%;
+        background: #333;
+        color: white; }
+        .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons button {
+          height: 100%;
+          width: 50%;
+          float: left;
+          border: none;
+          color: white;
+          border: 2px solid #c5c5c5;
+          color: #464646;
+          cursor: pointer; }
+        .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons .btn-update {
+          background: white;
+          border-right: 1.5px solid #c5c5c5; }
+        .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons .btn-delete {
+          background: white;
+          border-left: 1.5px solid #c5c5c5; }
+        .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons .btn-delete:hover {
+          background: #ec3c3c;
+          border: 2px solid #ec3c3c;
+          color: white; }
+        .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability .card-buttons .btn-update:hover {
+          background: #3c74ec;
+          border: 2px solid #3c74ec;
+          color: white; }
+    .dashboard-main .col-md-9 .dashboard-content .blood-availability .card-availability:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .dashboard-main .col-md-9 .dashboard-content .blood-availability input:hover {
+      transform: scale(1.1); }
+    .dashboard-main .col-md-9 .header-text {
+      color: #f32f39; }
+    .dashboard-main .col-md-9 .request-card {
+      background: white;
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: 20px;
+      height: 150px; }
+      .dashboard-main .col-md-9 .request-card h3 {
+        font-size: 20px;
+        height: 20%;
+        margin: 0;
+        padding-top: 10px; }
+      .dashboard-main .col-md-9 .request-card .request-card-left {
+        height: 40%;
+        width: 100%;
+        color: #f32f39;
+        font-weight: bold;
+        font-size: 30px; }
+        .dashboard-main .col-md-9 .request-card .request-card-left p {
+          margin: 0; }
+      .dashboard-main .col-md-9 .request-card .request-card-right {
+        height: 20%;
+        width: 100%;
+        color: #0066ff;
+        font-weight: bold;
+        font-size: 15px; }
+        .dashboard-main .col-md-9 .request-card .request-card-right p {
+          margin: 0; }
+      .dashboard-main .col-md-9 .request-card .request-buttons {
+        height: 20%;
+        width: 100%; }
+        .dashboard-main .col-md-9 .request-card .request-buttons button {
+          width: 50%;
+          float: left;
+          border: 3px solid #eee;
+          background: #eee;
+          color: black;
+          cursor: pointer; }
+        .dashboard-main .col-md-9 .request-card .request-buttons .btn-reject:hover {
+          background: #ec3c3c;
+          border: 3px solid #ec3c3c;
+          color: white; }
+        .dashboard-main .col-md-9 .request-card .request-buttons .btn-accept:hover {
+          background: #3c74ec;
+          border: 3px solid #3c74ec;
+          color: white; }
+    .dashboard-main .col-md-9 .receiver-request-card {
+      width: 100%;
+      height: 180px;
+      background: white;
+      padding: 16px;
+      position: relative; }
+      .dashboard-main .col-md-9 .receiver-request-card .status {
+        width: 100%;
+        font-size: 20px;
+        color: #3c74ec; }
+      .dashboard-main .col-md-9 .receiver-request-card .btn-delete-request {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        background: #ec3c3c;
+        border: 0;
+        color: white;
+        cursor: pointer;
+        transition: all .2s ease-in-out; }
+      .dashboard-main .col-md-9 .receiver-request-card .btn-delete-request:hover {
+        transform: scale(1.2); }
+      .dashboard-main .col-md-9 .receiver-request-card p {
+        color: #2f2f30;
+        font-weight: bold; }
+        .dashboard-main .col-md-9 .receiver-request-card p span {
+          color: #695f5f; }
+    .dashboard-main .col-md-9 .receiver-request-card:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.control-active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #f32f39; }
+
+/* END: Dashboard Page Styles */
+@media (min-width: 767.98px) {
+  .controls,
+  .controls-receiver {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .controls a .control-box,
+    .controls-receiver a .control-box {
+      width: 180px; }
+
+  .dashboard-content form select {
+    width: 180px; }
+  .dashboard-content form button {
+    width: 100px; }
+
+  .card-blood-group {
+    font-size: 1.3vw; }
+
+  .receiver-request-card p {
+    font-size: 1vw; }
+
+  .edit-main {
+    width: 80%; } }
+@media (max-width: 767.98px) {
+  .dashboard-main .controls a {
+    height: 100px;
+    float: left;
+    width: 33%;
+    padding: 1%; }
+
+  .controls-receiver a {
+    height: 100px;
+    float: left;
+    width: 50%;
+    padding: 1%; }
+
+  .edit-main {
+    width: 100%; } }
+@media (max-width: 575.98px) {
+  .dashboard-content form {
+    height: 200px;
+    margin-bottom: 100px; }
+    .dashboard-content form select {
+      width: 100%;
+      margin-bottom: 20px; }
+    .dashboard-content form input {
+      padding-left: 20px;
+      width: 50%; }
+    .dashboard-content form button {
+      padding: 0px 20px;
+      background: #333;
+      color: white;
+      width: 48%; }
+    .dashboard-content form select:focus,
+    .dashboard-content form input:focus,
+    .dashboard-content form button:focus {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } }
+@media (min-width: 767.99px) {
+  .footer img {
+    height: 60%; } }
+@media (max-width: 767.98px) {
+  .footer img {
+    height: 30%; } }
+@media (max-width: 575.98px) {
+  .footer img {
+    height: 50%; }
+
+  .links {
+    margin-top: 20px;
+    text-align: center; } }
+@media (min-width: 767.99px) {
+  .statistics i {
+    font-size: 5vw; }
+  .statistics h2 {
+    font-size: 2.5vw; } }
+@media (max-width: 767.98px) {
+  .statistics i {
+    font-size: 5vw; }
+  .statistics h2 {
+    font-size: 3vw; } }
+@media (max-width: 575.98px) {
+  .statistics i {
+    font-size: 6vw; }
+  .statistics h2 {
+    font-size: 8vw; } }
+@media (min-width: 767.99px) {
+  .registration-background {
+    background-size: cover; }
+
+  .registration-content {
+    padding: 100px 0px; }
+
+  .registration-box {
+    width: 35%; } }
+@media (max-width: 767.98px) {
+  .registration-background {
+    background-size: cover; }
+
+  .registration-box {
+    width: 80%; }
+
+  .registration-content {
+    padding: 100px 0px; } }
+@media (max-width: 575.98px) {
+  .registration-background {
+    background-size: cover; }
+
+  .registration-box {
+    width: 100%; }
+
+  .registration-content {
+    border-bottom: 1px solid #c2c0c0;
+    padding: 0; } }
+@media (min-width: 767.99px) {
+  .filter-main {
+    padding: 20px 40px; } }
+@media (max-width: 767.98px) {
+  .filter-main {
+    padding: 20px 20px; } }
+@media (max-width: 575.98px) {
+  .filter-main {
+    padding: 20px 10px; } }

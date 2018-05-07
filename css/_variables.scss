@@ -1,0 +1,32 @@
+/* Variables */
+
+// $filter1:rgba(48, 48, 47, 0.76);
+// $filter2:rgba(43, 66, 30, 0.452);
+// $filter1:rgba(13, 64, 83, 0.76);
+$filter1:rgba(84, 100, 247, 0.644);
+// $filter1:rgba(5, 46, 65, 0.76);
+// $filter2:rgba(46, 15, 0, 0.61);
+$filter2:rgba(114, 110, 110, 0.671);
+// $filter2:rgba(29, 67, 77, 0.452);
+// $filter1:rgba(68, 69, 70, 0.685);
+// $filter2:rgba(36, 186, 206, 0.411);
+$loginColor: rgba(56, 55, 55, 0.733);
+$componentBorder: rgb(231, 220, 220);
+$transparent: rgba(0, 0, 0, 0);
+$anchorColor: rgb(245, 245, 245);
+// $anchorColor: rgba(93, 240, 48, 0.884);
+// $filter3: rgba(168, 20, 173, 0.466);
+// $filter4: rgba(20, 86, 209, 0.445);
+$filter3: rgba(36, 33, 36, 0.466);
+$filter4: rgba(68, 228, 62, 0.342);
+$filter5: rgba(26, 25, 25, 0.568);
+$filter6: rgba(167, 65, 34, 0.596);
+$hospitalRegistration: rgb(0, 100, 33);
+$receiverRegistration: rgb(201, 92, 28);
+// $receiverRegistration: rgb(66, 8, 0);
+%flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

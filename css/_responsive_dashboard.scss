@@ -1,0 +1,83 @@
+@media (min-width: 767.98px) {
+    .controls,
+    .controls-receiver {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        a {
+            .control-box {
+                width: 180px;
+                // color: red;
+            }
+        }
+    }
+    .dashboard-content form {
+        select {
+            width: 180px;
+        }
+        button {
+            width: 100px;
+        }
+    }
+    .card-blood-group {
+        font-size: 1.3vw; // /.color: blue;
+    }
+    .receiver-request-card {
+        p {
+            font-size: 1vw;
+        }
+    }
+    .edit-main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .dashboard-main .controls a {
+        height: 100px;
+        float: left;
+        width: 33%;
+        padding: 1%;
+    }
+    .controls-receiver a {
+        height: 100px;
+        float: left;
+        width: 50%;
+        padding: 1%;
+    }
+    .edit-main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dashboard-content {
+        form {
+            height: 200px;
+            margin-bottom: 100px;
+            select {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            input {
+                padding-left: 20px;
+                width: 50%;
+                // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            button {
+                padding: 0px 20px;
+                // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                background: #333;
+                color: white;
+                width: 48%;
+            }
+            select:focus,
+            input:focus,
+            button:focus {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+        }
+    }
+}

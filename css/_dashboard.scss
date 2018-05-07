@@ -1,0 +1,288 @@
+/* START: Dashboard Page Styles */
+
+.dashboard-main {
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.555);
+    .col-md-3 {
+        padding: 20px;
+        .controls,
+        .controls-receiver {
+            width: 100%;
+            a {
+                text-decoration: none;
+                color: #333;
+                .control-box {
+                    margin-top: 20px;
+                    height: 150px;
+                    background: #333;
+                    @extend %flex-box;
+                    background: white;
+                    p {
+                        margin-top: 10px;
+                        font-weight: bold;
+                    }
+                    i {
+                        font-size: 40px;
+                    }
+                }
+                .control-box:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+        }
+    }
+    .col-md-9 {
+        padding: 60px;
+        .edit-main {
+            h3 {
+                margin-top: 20px;
+                color: rgb(243, 47, 57);
+            }
+            .row {
+                margin-top: 10px;
+            }
+            h5 {
+                color: rgb(60, 116, 236);
+            }
+            button {
+                margin-left: 20px;
+                margin-top: 20px;
+                width: 100px;
+                padding: 10px 20px;
+                background: $transparent;
+                border: 2px solid #333;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+            button:hover {
+                border: 2px solid #333;
+                background: #333;
+                color: white;
+            }
+        }
+        .dashboard-content {
+            h3 {
+                color: rgb(243, 47, 57);
+            }
+            .header-text1 {
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            .header-text2 {
+                margin-top: 50px;
+            }
+            form {
+                width: 100%;
+                height: 40px;
+                select {
+                    height: 100%;
+                    border: 2px solid rgb(255, 255, 255);
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                input {
+                    height: 100%;
+                    border: 2px solid rgb(255, 255, 255);
+                    padding-left: 20px;
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                button {
+                    height: 100%;
+                    border: 2px solid #333;
+                    padding: 0px 20px;
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    background: #333;
+                    color: white;
+                }
+                select:focus,
+                input:focus,
+                button:focus {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+            .blood-availability {
+                .card-availability {
+                    width: 100%;
+                    height: 160px;
+                    background: white;
+                    padding: 10px;
+                    position: relative;
+                    margin-top: 20px;
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    .card-blood-group {
+                        width: 100%;
+                        height: 25%;
+                        background: rgb(255, 255, 255);
+                        @extend %flex-box;
+                        //font-size: 20px;
+                        font-weight: bold;
+                        color: rgb(65, 63, 63);
+                        padding-left: 10px;
+                        // border-bottom: 1px solid #333;
+                    }
+                    input {
+                        width: 100%;
+                        height: 50%;
+                        margin: 0;
+                        text-align: center;
+                        border: none;
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: rgb(243, 47, 57);
+                        transition: all .2s ease-in-out;
+                        background: rgba(0, 0, 0, 0);
+                    }
+                    .card-buttons {
+                        width: 100%;
+                        height: 25%;
+                        background: #333;
+                        color: white;
+                        button {
+                            height: 100%;
+                            width: 50%;
+                            float: left;
+                            border: none;
+                            color: white;
+                            border: 2px solid rgb(197, 197, 197);
+                            color: rgb(70, 70, 70);
+                            cursor: pointer;
+                        }
+                        .btn-update {
+                            background: rgb(255, 255, 255);
+                            border-right: 1.5px solid rgb(197, 197, 197);
+                        }
+                        .btn-delete {
+                            background: rgb(255, 255, 255);
+                            border-left: 1.5px solid rgb(197, 197, 197);
+                        }
+                        .btn-delete:hover {
+                            background: rgb(236, 60, 60);
+                            border: 2px solid rgb(236, 60, 60);
+                            color: white;
+                        }
+                        .btn-update:hover {
+                            background: rgb(60, 116, 236);
+                            border: 2px solid rgb(60, 116, 236);
+                            color: white;
+                        }
+                    }
+                }
+                .card-availability:hover {
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+                input:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .header-text {
+            color: rgb(243, 47, 57);
+        }
+        .request-card {
+            background: white;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 20px;
+            height: 150px;
+            h3 {
+                font-size: 20px;
+                height: 20%;
+                margin: 0;
+                padding-top: 10px;
+            }
+            //width: 100%;
+            .request-card-left {
+                height: 40%;
+                width: 100%;
+                //float: left;
+                @extend %flex-box;
+                color: rgb(243, 47, 57);
+                font-weight: bold;
+                font-size: 30px;
+                p {
+                    margin: 0;
+                }
+            }
+            .request-card-right {
+                height: 20%;
+                width: 100%;
+                //float: left;
+                @extend %flex-box;
+                color: rgb(0, 102, 255);
+                font-weight: bold;
+                font-size: 15px;
+                p {
+                    margin: 0;
+                }
+            }
+            .request-buttons {
+                height: 20%;
+                width: 100%;
+                button {
+                    width: 50%;
+                    float: left;
+                    border: 3px solid #eee;
+                    background: #eee;
+                    color: black;
+                    cursor: pointer;
+                }
+                .btn-reject:hover {
+                    background: rgb(236, 60, 60);
+                    border: 3px solid rgb(236, 60, 60);
+                    color: white;
+                }
+                .btn-accept:hover {
+                    background: rgb(60, 116, 236);
+                    border: 3px solid rgb(60, 116, 236);
+                    color: white;
+                }
+            }
+        }
+        .receiver-request-card {
+            width: 100%;
+            height: 180px;
+            background: white;
+            padding: 16px;
+            position: relative;
+            .status {
+                width: 100%;
+                @extend %flex-box;
+                font-size: 20px;
+                color: rgb(60, 116, 236);
+            }
+            .btn-delete-request {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                background: rgb(236, 60, 60);
+                border: 0;
+                color: white;
+                cursor: pointer;
+                transition: all .2s ease-in-out;
+            }
+            .btn-delete-request:hover {
+                transform: scale(1.2);
+            }
+            p {
+                color: rgb(47, 47, 48);
+                font-weight: bold;
+                span {
+                    color: rgb(105, 95, 95);
+                }
+            }
+        }
+        .receiver-request-card:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+}
+
+.control-active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(243, 47, 57);
+}
+
+
+/* END: Dashboard Page Styles */
